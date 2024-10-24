@@ -1,3 +1,114 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Ramirez Portfolio</title>
+    <!-- DaisyUI (TailwindCSS) CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui"></script>
+</head>
+<body class="bg-base-200">
+
+    <!-- Navbar -->
+    <nav class="navbar bg-base-100 shadow-md fixed w-full z-10 top-0">
+      <div class="flex justify-center w-full">
+          <ul class="menu menu-horizontal text-xl">
+              <li><a href="#intro">Intro</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
+      </div>
+    </nav>
+
+    <!-- Intro -->
+    <section id="intro" class="min-h-dvh bg-base-200 pt-20">
+        <div class="container mx-auto text-center py-16">
+            <h1 class="text-8xl font-bold">Juan Ramirez</h1>
+            <p class="py-8 text-lg">IT Professional, Audio Enthusiast</p>
+            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="intro" class="min-h-fit bg-slate-900 pt-20">
+      <div class="container mx-auto py-16">
+        <h2 class="text-5xl text-center font-bold mb-8 text-white">Hi, I'm Juan!</h2>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="min-h-fit bg-base-200 pt-20">
+      <div class="container mx-auto py-16">
+        <h2 class="text-5xl text-center font-bold mb-8">Experience</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <!-- Work Experience Col -->
+          <div>
+            <h2 class="text-2xl font-semibold mb-6">Work Experience</h2>
+            <div class="relative border-l border-gray-300">
+              <!-- Superior Court -->
+              <div class="mb-8 pl-8 relative">
+                <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-blue-500 -translate-x-2 -translate-y-2"></div>
+                <h3 class="text-xl font-bold">Superior Court of California, County of Monterey</h3>
+                <h2>User Support Technician I</h2>
+                <span class="text-gray-500">Nov 2022 - Present</span>
+                <p class="text-gray-700 mt-2">
+                  DESCRIPTION
+                </p>
+              </div>
+              <!-- KTG -->
+              <div class="mb-8 pl-8 relative">
+                <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-blue-500 -translate-x-2 -translate-y-2"></div>
+                <h3 class="text-xl font-bold">Kennedy Technoogy Group</h3>
+                <h2>Tech Support Specialist | DevOps Engineer</h2>
+                <span class="text-gray-500">Aug 2021 - Oct 2022</span>
+                <p class="text-gray-700 mt-2">
+                  DESCRIPTION
+                </p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Education Col -->
+          <div>
+            <h2 class="text-2xl font-semibold mb-6">Education</h2>
+            <div class="relative border-l border-gray-300">
+              <!-- CSUMB -->
+              <div class="mb-8 pl-8 relative">
+                <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-green-500 -translate-x-2 -translate-y-2"></div>
+                <h3 class="text-xl font-bold">California State University Monterey Bay</h3>
+                <h2>Bachelor's in Computer Science</h2>
+                <span class="text-gray-500 italic">Aug 2018 - May 2022</span>
+                <p class="text-gray-700 mt-2">
+                  DESCRIPTION
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer p-4 bg-neutral text-neutral-content text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2024 Juan Ramirez</p>
+        </div>
+    </footer>
+
+    <!-- Smooth scrolling for anchor links -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

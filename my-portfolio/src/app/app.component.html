@@ -11,23 +11,48 @@
 </head>
 <body class="bg-base-200">
 
-    <!-- Navbar -->
+    <!-- Navbars -->
     <nav class="navbar bg-base-100 shadow-md fixed w-full z-10 top-0">
-      <div class="flex justify-center w-full">
-          <ul class="menu menu-horizontal text-xl">
-              <li><a href="#intro">Intro</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
+
+      <!-- Mobile Navbar -->
+      <div class="flex-none lg:hidden">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-64 mx-auto">
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
+        </div>
+      </div>
+      
+      <!-- Text Logo -->
+      <div class="flex-1 lg:flex-none lg:ml-0 lg:text-left text-center">
+        <a href="#" class="btn btn-ghost normal-case text-xl">JR</a>
+      </div>
+
+      <!-- Desktop Navbar -->
+      <div class="hidden lg:flex justify-center w-full">
+        <ul class="menu menu-horizontal p-0">
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
     </nav>
 
     <!-- Intro -->
     <section id="intro" class="min-h-fit bg-base-200 py-40">
         <div class="container mx-auto text-center py-16">
-            <h1 class="text-8xl font-bold">Juan Ramirez</h1>
+            <h1 class="text-7xl font-bold">Juan Ramirez</h1>
             <p class="py-8 text-2xl">IT Professional, Audio Enthusiast</p>
             <a href="#contact" class="btn btn-primary">Get in Touch</a>
         </div>
@@ -113,26 +138,25 @@
     </section>
 
     <!-- Projects -->
-    <section id="experience" class="min-h-fit bg-slate-900 py-24">
+    <section id="projects" class="min-h-fit bg-slate-900 py-24">
       <div class="container mx-auto px-4">
         <h2 class="text-5xl font-bold mb-4 text-white">Projects</h2>
         <p class="text-2xl text-white"><i>Some of my recent works at a glance.</i></p>
         <div class="py-8 grid grid-cols-1 gap-8">
           <div>
             <div class="relative border-l border-gray-300 pl-4 lg:pl-8">
-              <!-- Project 1 -->
+              <!-- JPAW -->
               <div class="mb-8 pl-8 relative">
-                <h3 class="text-xl font-bold text-white">Project name here</h3>
+                <h3 class="text-xl font-bold text-white">JPAW Web App</h3>
+                <span class="text-gray-500 italic">CSU Monterey Bay</span>
+                <br>
+                <span class="text-gray-500">May 2022</span>
                 <p class="text-white mt-2">
-                  Description + some links maybe
+                  Student-led recreation of the Justice Partner Access Website (JPAW). This project was directed by the Superior Court of California in Monterey Bay and offers a search portal for public court data (Cases, Hering Information, Traffic Citations, etc...).
+                  The objective for this project was to create an reimagined "updated" User Interface for JPAW. This updated version was a Progressive Web Application built withg Angular.
+                  At it's core, the project prioritized consistent site performance/experience across different devices, finding ways to remove “technical debt” acquired during the previous development cycle (i.e. old dev practices), and greatly diminish the cost of maintaining three separate applications (web, iOS, Android) by consolidating the experience into one web application.
                 </p>
-              </div>
-              <!-- Project 2 -->
-              <div class="mb-8 pl-8 relative">
-                <h3 class="text-xl font-bold text-white">Another Project name here</h3>
-                <p class="text-white mt-2">
-                  Description + some links maybe
-                </p>
+                <a class="link text-white" href="https://csumb.edu/scd/cscapstones22/" target="_blank" rel="noopener noreferrer">Read More</a>
               </div>
             </div>
           </div>
@@ -149,14 +173,14 @@
 
         <!-- Contact Links -->
         <div class="flex justify-center space-x-4 mt-8">
-            <a href="mailto:your.emailexample.com" class="btn btn-primary">
+            <a href="mailto:contact.juanmramirez@gmail.com" class="btn btn-primary">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z"/>
                 <polyline points="22,6 12,13 2,6"/>
               </svg>
               Email
             </a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn btn-secondary">
+            <a href="https://www.linkedin.com/in/juanramirez10a/" target="_blank" class="btn btn-secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20.447 20.452H16.89v-5.569c0-1.327-.025-3.037-1.852-3.037-1.854 0-2.137 1.448-2.137 2.944v5.662H9.348V9h3.417v1.561h.047c.477-.899 1.637-1.852 3.37-1.852 3.602 0 4.267 2.368 4.267 5.451v6.292zM5.337 7.433a1.954 1.954 0 110-3.906 1.954 1.954 0 010 3.906zM6.697 20.452H3.978V9h2.719v11.452zM22.225 0H1.771C.792 0 .001.783.001 1.748v20.504C.001 23.217.792 24 1.771 24h20.451c.98 0 1.772-.783 1.772-1.748V1.748C23.997.783 23.206 0 22.225 0z" />
                 </svg>
